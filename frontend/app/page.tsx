@@ -30,7 +30,7 @@ export default function Home() {
       <Projects />
       <Certificate />
       <Contact />
-
+      {/* deploy trigger */}
      
     </main>
   );
