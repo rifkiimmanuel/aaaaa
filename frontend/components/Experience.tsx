@@ -115,8 +115,7 @@ export default function Experience() {
       ],
 
       images: [
-        "/experience3/xlsmart1.png",
-        "/experience2/xlat3.jpg",
+        "/experience4/image.png",
       ],
     },
   ];
