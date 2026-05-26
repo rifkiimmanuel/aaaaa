@@ -95,6 +95,30 @@ export default function Experience() {
         "/experience2/xlat3.jpg",
       ],
     },
+    {
+      company: "ID/X Partners X Rakamin Academy",
+      location: "Jakarta, Indonesia",
+      role: "Project-Based Virtual Intern: Data Science",
+      period: "Jun 2024 — Jul 2024",
+
+      description: [
+        "Leveraged data science techniques to analyze real-world financial datasets in business case projects, improving analysis efficiency by optimizing data processing workflows",
+
+        "Developed a robust machine learning model for Credit Risk Analysis, achieving an accuracy of 96.5%, while proactively learning new tools and techniques to enhance project outcomes"
+      ],
+
+      tech: [
+        "Python",
+        "Microsoft Excel",
+        "Google Sheets",
+        "Data Analytics",
+      ],
+
+      images: [
+        "/experience3/xlsmart1.png",
+        "/experience2/xlat3.jpg",
+      ],
+    },
   ];
 
   return (
