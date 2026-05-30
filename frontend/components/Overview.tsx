@@ -22,7 +22,7 @@ export default function Overview() {
     {
       icon: "⚡",
       title: "3+",
-      subtitle: "Internship Experiences",
+      subtitle: "Experiences",
     },
   ];
 
