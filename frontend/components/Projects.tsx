@@ -131,19 +131,19 @@ export default function Projects() {
 
   return (
 
-    <section
-      id="projects"
-      className="min-h-screen bg-[#020617] px-6 md:px-16 lg:px-24 py-24"
-    >
+<section
+  id="projects"
+  className="bg-white px-6 md:px-16 lg:px-24 py-24 scroll-mt-24"
+>
 
       {/* Header */}
       <div className="mb-20">
 
-        <p className="text-indigo-400 font-semibold uppercase tracking-[3px] mb-3">
+        <p className="text-[#0cb64d] font-semibold uppercase tracking-[3px] mb-3">
          
         </p>
 
-        <h2 className="text-5xl font-bold text-white">
+        <h2 className="text-5xl md:text-6xl font-light text-[#0cb64d]">
           Featured Work
         </h2>
 
@@ -156,8 +156,18 @@ export default function Projects() {
 
           <div
             key={index}
-            className="bg-[#0B1120] border border-indigo-900/40 rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
-          >
+            className="
+bg-white
+border
+border-[#e5e7eb]
+rounded-3xl
+overflow-hidden
+shadow-sm
+hover:-translate-y-2
+hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]
+transition-all
+duration-300
+"          >
 
             {/* Top Gradient */}
             <div
@@ -180,19 +190,19 @@ export default function Projects() {
                   {project.company}
                 </p>
 
-                <p className="text-gray-500 text-sm">
+                <p className="text-[#595d58] text-sm">
                   {project.year}
                 </p>
 
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-white mb-4 leading-snug">
+              <h3 className="text-2xl font-bold text-[#111827] mb-4 leading-snug">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-400 leading-relaxed mb-6 text-sm">
+              <p className="text-[#595d58] leading-relaxed mb-6 text-sm">
                 {project.description}
               </p>
 
@@ -203,8 +213,17 @@ export default function Projects() {
 
                   <span
                     key={item}
-                    className="bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full text-xs"
-                  >
+                    className="
+bg-[#f3f4f6]
+border
+border-[#e5e7eb]
+text-[#374151]
+px-3
+py-1
+rounded-full
+text-xs
+"
+                   >
                     {item}
                   </span>
 
@@ -217,8 +236,20 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center border border-indigo-500/30 hover:bg-indigo-500 hover:text-white text-indigo-300 py-3 rounded-2xl transition-all duration-300 font-medium"
-              >
+                className="
+w-full
+flex
+items-center
+justify-center
+bg-[#0cb64d]
+hover:bg-[#09963f]
+text-white
+py-3
+rounded-2xl
+font-medium
+transition-all
+duration-300
+"              >
 
                 View Project
 

@@ -51,7 +51,7 @@ export default function Experience() {
       description: [
         "Deployed a Metabase platform on Google Cloud Run with PostgreSQL integration, enhancing real-time data access for cross-functional stakeholders.",
 
-        "Created 10+ insightful Metabase dashboards using Google BigQuery for KPI monitoring and organizational analytics.",
+        "Created 5+ insightful Metabase dashboards using Google BigQuery for KPI monitoring and organizational analytics.",
 
         "Designed an interactive Power BI dashboard to visualize employee learning trends and improve training effectiveness.",
       ],
@@ -121,26 +121,26 @@ export default function Experience() {
   ];
 
   return (
-    <section
-      id="experience"
-      className="bg-[#020617] px-6 md:px-16 lg:px-24 py-24 scroll-mt-24"
-    >
+  <section
+    id="experience"
+    className="bg-white px-6 md:px-16 lg:px-24 py-24 scroll-mt-24"
+  >
       {/* Header */}
       <div className="mb-20">
         <p className="text-indigo-500 font-semibold uppercase tracking-[3px] mb-3">
           
         </p>
 
-        <h2 className="text-5xl md:text-6xl font-bold text-white">
-        Experience
-        </h2>
+<h2 className="text-5xl md:text-6xl font-light text-[#0cb64d]">
+  Experience
+</h2>
       </div>
 
       {/* Timeline Wrapper */}
       <div className="relative">
         
         {/* Vertical Line */}
-        <div className="absolute left-[11px] top-0 bottom-0 w-[2px] bg-indigo-900/40" />
+        <div className="absolute left-3 top-0 bottom-0 w-[2px] -translate-x-1/2 bg-[#e5e7eb]" />
 
         <div className="space-y-20">
           {experiences.map((exp, index) => (
@@ -204,21 +204,27 @@ function ExperienceCard({
     <div className="relative pl-16">
 
       {/* Timeline Dot */}
-      <div className="absolute left-0 top-10 flex items-center justify-center">
-
-        {/* Outer Circle */}
-        <div className="w-6 h-6 rounded-full bg-[#020617] border-[3px] border-indigo-500 flex items-center justify-center">
-
-          {/* Inner Dot */}
-          <div className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
-
-        </div>
-
-      </div>
+      <div className="absolute left-3 top-10 -translate-x-1/2">
+  <div className="w-6 h-6 rounded-full bg-white border-[3px] border-[#0cb64d] flex items-center justify-center">
+    <div className="w-2.5 h-2.5 rounded-full bg-[#0cb64d]" />
+  </div>
+</div>
 
       {/* Card */}
-      <div className="bg-[#0B1120] border border-indigo-900/30 rounded-3xl p-8 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(99,102,241,0.08)] transition-all duration-300">
-
+      <div
+  className="
+  bg-white
+  border
+  border-[#e5e7eb]
+  rounded-3xl
+  p-8
+  shadow-sm
+  hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]
+  hover:-translate-y-1
+  transition-all
+  duration-300
+  "
+>
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
 
           {/* LEFT CONTENT */}
@@ -231,21 +237,21 @@ function ExperienceCard({
 
                 <div className="space-y-3">
 
-                  <h3 className="text-3xl font-bold text-white leading-tight">
+                <h3 className="text-3xl font-bold text-[#111827] leading-tight">
                     {exp.company}
                   </h3>
 
-                  <p className="text-indigo-400 font-semibold text-lg">
+                  <p className="text-[#374151] font-semibold text-lg">
                     {exp.role}
                   </p>
 
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-[#595d58] text-sm">
                     📍 {exp.location}
                   </p>
 
                 </div>
 
-                <p className="text-gray-400 text-sm whitespace-nowrap">
+                <p className="text-[#595d58] text-sm whitespace-nowrap">
                   {exp.period}
                 </p>
 
@@ -261,10 +267,10 @@ function ExperienceCard({
 
                   <li
                     key={index}
-                    className="flex items-start gap-4 text-gray-300 leading-relaxed text-justify"
+                    className="flex items-start gap-4 text-[#595d58] leading-relaxed text-justify"
                   >
 
-                    <span className="text-indigo-400 mt-[6px] text-xs">
+                    <span className="text-[#0cb64d] mt-[6px] text-xs">
                       ●
                     </span>
 
@@ -286,7 +292,20 @@ function ExperienceCard({
 
                 <span
                   key={item}
-                  className="bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm"
+                  className="
+                  bg-[#f3f4f6]
+                  border
+                  border-[#e5e7eb]
+                  text-[#374151]
+                  px-4
+                  py-2
+                  rounded-full
+                  text-sm
+                  font-medium
+                  transition-all
+                  duration-300
+                  hover:bg-[#e5e7eb]
+                  "
                 >
                   {item}
                 </span>
@@ -301,8 +320,7 @@ function ExperienceCard({
           <div className="space-y-5">
 
             {/* Image Slider */}
-            <div className="relative w-full h-[340px] rounded-3xl overflow-hidden group border border-indigo-900/30">
-
+            <div className="relative w-full h-[340px] rounded-3xl overflow-hidden group border border-[#e5e7eb]">
               <Image
                 src={exp.images[currentImage]}
                 alt={exp.company}
@@ -311,12 +329,12 @@ function ExperienceCard({
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/10" />
+              <div className="absolute inset-0 bg-black/5" />
 
               {/* Prev Button */}
               <button
                 onClick={prevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 w-11 h-11 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm text-[#111827] border border-[#e5e7eb] hover:bg-[#f9fafb] w-11 h-11 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
               >
                 ←
               </button>
@@ -324,7 +342,7 @@ function ExperienceCard({
               {/* Next Button */}
               <button
                 onClick={nextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 w-11 h-11 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm text-[#111827] border border-[#e5e7eb] hover:bg-[#f9fafb] w-11 h-11 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
               >
                 →
               </button>
@@ -344,8 +362,8 @@ function ExperienceCard({
                     }
                     className={`h-2 rounded-full transition-all duration-300 ${
                       currentImage === index
-                        ? "w-8 bg-indigo-400"
-                        : "w-2 bg-gray-600"
+                      ? "w-8 bg-[#0cb64d]"
+                      : "w-2 bg-[#d1d5db]"
                     }`}
                   />
 

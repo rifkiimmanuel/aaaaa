@@ -102,50 +102,70 @@ export default function Navbar(): JSX.Element {
 
   return (
 
-    <nav className="fixed top-0 left-0 h-[60px] w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/10 shadow-[0px_4px_25px_0px_rgba(0,0,0,0.4)]">
+    <nav className="
+    fixed
+    top-0
+    left-0
+    h-[65px]
+    w-full
+    px-6
+    md:px-16
+    lg:px-24
+    xl:px-32
+    flex
+    items-center
+    justify-between
+    z-50
+    bg-white/80
+    backdrop-blur-xl
+    border-b
+    border-green-100
+    shadow-[0_4px_20px_rgba(0,0,0,0.04)]
+    ">
 
       {/* Logo */}
       <a
         href="#about"
-        className="text-white font-bold text-xl tracking-wide"
+        className="text-[#16311e] font-bold text-xl tracking-wide"
       >
         PORTFOLIO
       </a>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex items-center gap-10">
+{/* Desktop Menu */}
+<ul className="hidden md:flex items-center gap-3">
 
-        {navLinks.map((link: NavLink) => (
+  {navLinks.map((link: NavLink) => (
 
-          <li key={link.name}>
+    <li key={link.name}>
 
-            <a
-              href={link.href}
-              className={`relative pb-1 text-sm font-medium transition-all duration-300 ${
-                activeSection === link.id
-                  ? "text-white"
-                  : "text-gray-400 hover:text-white"
-              }`}
-            >
+      <a
+        href={link.href}
+        className={`
+          px-4
+          py-2
+          rounded-full
+          text-sm
+          font-medium
+          transition-all
+          duration-300
+          ${
+            activeSection === link.id
+              ? "bg-green-50 text-[#0cb64d]"
+              : "text-[#595d58] hover:text-[#0cb64d]"
+          }
+        `}
+      >
 
-              {link.name}
+        {link.name}
 
-              {/* Animated Underline */}
-              <span
-                className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 ${
-                  activeSection === link.id
-                    ? "w-full"
-                    : "w-0"
-                }`}
-              />
+      </a>
 
-            </a>
+    </li>
 
-          </li>
+  ))}
 
-        ))}
-
-      </ul>
+</ul>
 
       {/* Mobile Button */}
       <button
@@ -162,7 +182,7 @@ export default function Navbar(): JSX.Element {
           width="28"
           height="28"
           viewBox="0 0 30 30"
-          fill="#ffffff"
+          fill="#16311e"
         >
 
           <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
@@ -174,8 +194,21 @@ export default function Navbar(): JSX.Element {
       {/* Mobile Menu */}
       {isOpen && (
 
-        <div className="absolute top-[60px] left-0 w-full bg-[#0a0a0a] border-t border-white/10 p-6 md:hidden shadow-lg">
-
+<div
+className="
+absolute
+top-[70px]
+left-0
+w-full
+bg-white/95
+backdrop-blur-xl
+border-t
+border-green-100
+p-6
+md:hidden
+shadow-xl
+"
+>
           <ul className="flex flex-col gap-5">
 
             {navLinks.map((link: NavLink) => (

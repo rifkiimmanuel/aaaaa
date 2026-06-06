@@ -61,16 +61,20 @@ export default function Certificate() {
     "SQL (Advanced) HackerRank",
     "SQL (Intermediate) HackerRank",
     "SQL (Basic) HackerRank",
-    "ETL in Python & SQL LinkedIn Learning",
     "Data Science MySkill",
+    "ETL in Python & SQL LinkedIn Learning",
     "Belajar Dasar SQL Dicoding",
+    "Belajar Dasar Data Science Dicoding",
+    "Memulai Pemrograman Dengan Python Dicoding",
+    "Belajar Machine Learning Untuk Pemula",
+    "Belajar Dasar Visualisasi Data",
   ];
 
   return (
     <section
-      id="certificate"
-      className="bg-[#020617] px-6 md:px-16 lg:px-24 py-24"
-    >
+  id="certificate"
+  className="bg-white px-6 md:px-16 lg:px-24 py-24 scroll-mt-24"
+>
 
       {/* Header */}
       <div className="mb-20">
@@ -79,7 +83,7 @@ export default function Certificate() {
           
         </p>
 
-        <h2 className="text-5xl font-bold text-white">
+        <h2 className="text-5xl md:text-6xl font-light text-[#0cb64d]">
         Certificate & Skills
         </h2>
 
@@ -92,8 +96,18 @@ export default function Certificate() {
 
           <div
             key={category.title}
-            className="bg-[#0B1120] border border-indigo-900/30 rounded-3xl p-7 hover:shadow-2xl transition-all duration-300"
-          >
+            className="
+            bg-white
+            border
+            border-[#e5e7eb]
+            rounded-3xl
+            p-7
+            shadow-sm
+            hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]
+            hover:-translate-y-1
+            transition-all
+            duration-300
+            " >
 
             {/* Title */}
             <div className="flex items-center gap-4 mb-6">
@@ -102,7 +116,7 @@ export default function Certificate() {
                 {category.icon}
               </span>
 
-              <h3 className="text-2xl font-bold text-white">
+              <h3 className="text-2xl font-bold text-[#111827]">
                 {category.title}
               </h3>
 
@@ -115,8 +129,20 @@ export default function Certificate() {
 
                 <span
                   key={skill}
-                  className="bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm hover:bg-indigo-500/20 transition-all duration-300"
-                >
+                  className="
+                  bg-[#f3f4f6]
+                  border
+                  border-[#e5e7eb]
+                  text-[#374151]
+                  px-4
+                  py-2
+                  rounded-full
+                  text-sm
+                  font-medium
+                  hover:bg-[#e5e7eb]
+                  transition-all
+                  duration-300
+                  " >
                   {skill}
                 </span>
 
@@ -131,7 +157,14 @@ export default function Certificate() {
       </div>
 
       {/* Certificates */}
-      <div className="bg-[#0B1120] border border-indigo-900/30 rounded-3xl p-8">
+      <div className="
+bg-white
+border
+border-[#e5e7eb]
+rounded-3xl
+p-8
+shadow-sm
+">
 
         {/* Title */}
         <div className="flex items-center gap-4 mb-8">
@@ -140,7 +173,7 @@ export default function Certificate() {
             📜
           </span>
 
-          <h3 className="text-3xl font-bold text-white">
+          <h3 className="text-3xl font-bold text-[#111827]">
             Certifications & Achievements
           </h3>
 
@@ -153,24 +186,31 @@ export default function Certificate() {
 
             <div
               key={cert}
-              className="bg-[#111827] border border-indigo-900/20 rounded-2xl p-5 hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300"
-            >
+              className="
+              bg-white
+              border
+              border-[#e5e7eb]
+              rounded-2xl
+              p-5
+              hover:shadow-lg
+              hover:-translate-y-1
+              transition-all
+              duration-300
+              " >
 
               <div className="flex items-start justify-between gap-4">
 
-                <div className="flex gap-3">
+              <div className="flex items-center gap-3">
+  <span className="text-[#0cb64d] text-lg leading-none">
+    •
+  </span>
 
-                  <span className="text-yellow-400 mt-1">
-                    ●
-                  </span>
+  <p className="text-[#595d58] text-sm">
+    {cert}
+  </p>
+</div>
 
-                  <p className="text-gray-300 leading-relaxed text-sm">
-                    {cert}
-                  </p>
-
-                </div>
-
-                <span className="text-indigo-400">
+                <span className="text-[#0cb64d]">
                   ↗
                 </span>
 

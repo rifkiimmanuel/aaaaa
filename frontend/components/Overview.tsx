@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { Download } from "lucide-react";
+import { DM_Sans   } from "next/font/google";
+
+const dmSans   = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function Overview() {
 
@@ -12,11 +18,11 @@ export default function Overview() {
     {
       icon: "🏆",
       title: "Rank 3",
-      subtitle: "Jababeka Scholar",
+      subtitle: "Jababeka Scholarship",
     },
     {
       icon: "🌎",
-      title: "11+",
+      title: "10+",
       subtitle: "Courses Taken",
     },
     {
@@ -30,7 +36,7 @@ export default function Overview() {
 
     <section
       id="overview"
-      className="min-h-screen flex items-center justify-center px-6 md:px-16 lg:px-24 py-24 bg-[#020817] scroll-mt-24 overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 md:px-16 lg:px-24 py-24 bg-[#ffffff] scroll-mt-24 overflow-hidden"
     >
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
@@ -44,104 +50,141 @@ export default function Overview() {
           {/* Main Heading */}
           <div className="space-y-5">
 
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
-              I&apos;m Rifki Immanuel Sinaga
-            </h1>
+          <h1 className={`${dmSans.className} text-6xl font-light text-[#0cb64d]`}>
+          Turning Data Into Intelligent Solutions
+        </h1>
 
-            <p className="text-gray-400 leading-9 text-lg text-justify w-full">
-  Fresh graduate majoring in Informatics at President University
-  with a concentration in Artificial Intelligence and hands-on
-  experience in Data Analytics, Business Intelligence,
-  AI-powered applications, and automation systems.
-</p>
+        <p className={`${dmSans.className} text-[#595d58] leading-9 text-lg text-justify w-full`}>
+          Hi! I'm Rifki Immanuel Sinaga, an Informatics graduate specializing in Artificial
+          Intelligence. I leverage data, analytics, and machine learning to create
+          solutions that improve decision-making, automate processes, and generate business value.
+        </p>
 
-<p className="text-gray-400 leading-9 text-lg text-justify w-full">
-  Experienced in developing dashboards using Metabase,
-  Power BI, and Google BigQuery while collaborating
-  with cross-functional teams to transform data into
-  actionable business insights.
-</p>
+        <p className={`${dmSans.className} text-[#595d58] leading-9 text-lg text-justify w-full`}>
+          My experience includes Data Analytics, Business Intelligence, 
+          AI application development, and dashboard creation through internships,
+          academic projects, and real-world implementations.
+        </p>
 
           </div>
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-4">
 
-            {stats.map((item) => (
+{stats.map((item) => (
 
-              <div
-                key={item.title}
-                className="bg-gradient-to-br from-[#09152f] to-[#071225] border border-indigo-900/40 rounded-3xl p-6 flex items-center gap-5 hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.12)] transition-all duration-300"
-              >
+  <div
+    key={item.title}
+    className="
+    bg-white/80
+    backdrop-blur-md
+    border border-green-100
+    rounded-3xl
+    p-6
+    flex items-center
+    gap-5
+    shadow-sm
+    hover:bg-green-50/80
+    hover:border-[#0cb64d]
+    hover:shadow-[0_10px_40px_rgba(12,182,77,0.15)]
+    hover:-translate-y-1
+    transition-all
+    duration-300
+    "
+  >
 
-                <div className="text-4xl">
-                  {item.icon}
-                </div>
+    {/* Icon */}
+    <div className="text-4xl text-[#0cb64d] flex-shrink-0">
+      {item.icon}
+    </div>
 
-                <div>
+    {/* Content */}
+    <div>
 
-                  <h3 className="text-3xl font-bold text-white">
-                    {item.title}
-                  </h3>
+      <h3 className="text-4xl font-bold text-[#16311e] leading-none">
+        {item.title}
+      </h3>
 
-                  <p className="text-gray-400 uppercase text-sm tracking-wide">
-                    {item.subtitle}
-                  </p>
+      <p className="text-[#595d58] uppercase text-xs tracking-[0.2em] mt-2">
+        {item.subtitle}
+      </p>
 
-                </div>
+    </div>
 
-              </div>
+  </div>
 
-            ))}
+))}
 
-          </div>
+</div>
 
           {/* Resume Button */}
-          <div className="pt-2">
-
-            <a
-              href="resume/Rifki Immanuel Sinaga_CV.pdf"
-              download
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:scale-105 hover:shadow-[0_0_30px_rgba(99,102,241,0.45)] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
-            >
-
-              Download Resume
-
-              <Download size={20} />
-
-            </a>
-
-          </div>
+{/* Resume Button */}
+<div className="pt-2">
+  <a
+    href="resume/Rifki Immanuel Sinaga_CV.pdf"
+    download
+    className="
+      inline-flex
+      items-center
+      gap-3
+      bg-[#0cb64d]
+      hover:bg-[#09963f]
+      text-white
+      px-8
+      py-4
+      rounded-full
+      font-semibold
+      shadow-sm
+      hover:shadow-lg
+      hover:-translate-y-1
+      transition-all
+      duration-300
+    "
+  >
+    Download Resume
+    <Download size={20} />
+  </a>
+</div>
 
         </div>
 
         {/* RIGHT IMAGE */}
         <div className="flex justify-center">
 
-          <div className="relative">
+<div className="relative">
 
-            {/* Glow */}
-            <div className="absolute inset-0 bg-indigo-500 blur-[120px] opacity-30 rounded-full" />
+  {/* Glow */}
+  <div className="absolute inset-0 bg-[#498f64] blur-[120px] opacity-20 rounded-full" />
 
-            {/* Image Container */}
-            <div className="relative w-[320px] h-[320px] md:w-[430px] md:h-[430px] rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 p-[6px] shadow-[0_0_60px_rgba(99,102,241,0.35)]">
+  {/* Image Container */}
+  <div className="
+    relative
+    w-[320px] h-[320px]
+    md:w-[430px] md:h-[430px]
+    rounded-full
+    bg-gradient-to-br
+    from-[#0cb64d]
+    to-[#19d36a]
+    p-[6px]
+    shadow-[0_0_50px_rgba(12,182,77,0.20)]
+  ">
 
-              <div className="relative w-full h-full rounded-full overflow-hidden bg-black">
+    <div className="relative w-full h-full rounded-full overflow-hidden bg-white">
 
-                <Image
-                  src="/rifkiimmanuel.jpg"
-                  alt="Rifki Profile"
-                  fill
-                  className="object-cover rounded-full"
-                />
+      <Image
+        src="/rifkiimmanuel.jpg"
+        alt="Rifki Profile"
+        fill
+        className="object-cover rounded-full"
+      />
 
-              </div>
+    </div>
 
-            </div>
+  </div>
 
-          </div>
+</div>
 
-        </div>
+</div>
 
       </div>
 
