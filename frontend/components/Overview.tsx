@@ -50,9 +50,9 @@ export default function Overview() {
       "
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
-        
+
         {/* LEFT CONTENT */}
-        <div className="space-y-8 order-2 lg:order-1">
+        <div className="space-y-8">
 
           {/* Heading */}
           <div className="space-y-5">
@@ -106,6 +106,43 @@ export default function Overview() {
 
           </div>
 
+          {/* MOBILE IMAGE */}
+          <div className="flex justify-center py-2 lg:hidden">
+
+            <div className="relative">
+
+              <div className="absolute inset-0 bg-[#498f64] blur-[100px] opacity-20 rounded-full" />
+
+              <div
+                className="
+                relative
+                w-[260px]
+                h-[260px]
+                rounded-full
+                bg-gradient-to-br
+                from-[#0cb64d]
+                to-[#19d36a]
+                p-[6px]
+                shadow-[0_0_40px_rgba(12,182,77,0.15)]
+                "
+              >
+                <div className="relative w-full h-full rounded-full overflow-hidden bg-white">
+
+                  <Image
+                    src="/rifkiimmanuel.jpg"
+                    alt="Rifki Profile"
+                    fill
+                    priority
+                    className="object-cover rounded-full"
+                  />
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
           {/* Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 pt-2">
 
@@ -113,8 +150,7 @@ export default function Overview() {
               <div
                 key={item.title}
                 className="
-                bg-white/80
-                backdrop-blur-md
+                bg-white
                 border
                 border-green-100
                 rounded-3xl
@@ -127,7 +163,7 @@ export default function Overview() {
                 shadow-sm
                 hover:bg-green-50/80
                 hover:border-[#0cb64d]
-                hover:shadow-[0_10px_40px_rgba(12,182,77,0.15)]
+                hover:shadow-[0_10px_40px_rgba(12,182,77,0.12)]
                 hover:-translate-y-1
                 transition-all
                 duration-300
@@ -142,7 +178,7 @@ export default function Overview() {
                     {item.title}
                   </h3>
 
-                  <p className="text-[#595d58] uppercase text-[10px] md:text-xs tracking-[0.2em] mt-2">
+                  <p className="text-[#595d58] uppercase text-[10px] md:text-xs tracking-[0.18em] mt-2">
                     {item.subtitle}
                   </p>
                 </div>
@@ -153,6 +189,7 @@ export default function Overview() {
 
           {/* Resume Button */}
           <div className="pt-2">
+
             <a
               href="resume/Rifki Immanuel Sinaga_CV.pdf"
               download
@@ -181,30 +218,23 @@ export default function Overview() {
               Download Resume
               <Download size={20} />
             </a>
+
           </div>
 
         </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="flex justify-center order-1 lg:order-2">
+        {/* DESKTOP IMAGE */}
+        <div className="hidden lg:flex justify-center">
 
           <div className="relative">
 
-            {/* Glow */}
             <div className="absolute inset-0 bg-[#498f64] blur-[120px] opacity-20 rounded-full" />
 
-            {/* Circle */}
             <div
               className="
               relative
-              w-[240px]
-              h-[240px]
-              sm:w-[300px]
-              sm:h-[300px]
-              md:w-[380px]
-              md:h-[380px]
-              lg:w-[430px]
-              lg:h-[430px]
+              w-[430px]
+              h-[430px]
               rounded-full
               bg-gradient-to-br
               from-[#0cb64d]
